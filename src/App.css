@@ -1,0 +1,25 @@
+#body {
+  background-image: url(./images/background.png);
+  background-size: 100%;
+  background-position: center;
+  height: 91.9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 3rem;
+}
+
+#widget {
+  background: #ddd;
+  width: 700px;
+  height: 300px;
+}
+
+#search {
+  margin: 20px;
+  display: flex;
+}
