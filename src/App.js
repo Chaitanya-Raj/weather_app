@@ -11,7 +11,7 @@ function App() {
   const [weather, setWeather] = useState();
   const [city, setCity] = useState("new delhi");
   const [unit, setUnit] = useState("metric");
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${API_KEY}`;
 
   useEffect(() => {
     Axios.get(url).then((response) => {
