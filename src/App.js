@@ -10,7 +10,8 @@ function App() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState();
   const [city, setCity] = useState("moscow");
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
+  const [unit, setUnit] = useState("metric");
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${API_KEY}`;
 
   useEffect(() => {
     Axios.get(url).then((response) => {
@@ -21,6 +22,11 @@ function App() {
 
   const onSearchChange = (event) => {
     setSearch(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const onToggle = (event) => {
+    setUnit(event.target.value);
   };
 
   const onSubmit = (event) => {
@@ -38,6 +44,7 @@ function App() {
         search={search}
         onChange={onSearchChange}
         onSubmit={onSubmit}
+        onToggle={onToggle}
         weather={weather}
       />
     </div>

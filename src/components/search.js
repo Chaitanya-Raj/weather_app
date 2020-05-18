@@ -2,10 +2,21 @@ import React from "react";
 
 const Search = ({ search, onChange, onSubmit }) => {
   return (
-    <form id="search" onSubmit={onSubmit}>
-      <input value={search} onChange={onChange} />
-      <button>Search</button>
-    </form>
+    <div className="search container h-100">
+      <div className="d-flex justify-content-center h-100">
+        <form className="searchbar" onSubmit={onSubmit}>
+          <input
+            className="search_input"
+            value={search}
+            onChange={onChange}
+            placeholder="Search..."
+          />
+          <button className="search_icon">
+            <i className="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 
