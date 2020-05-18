@@ -15,12 +15,12 @@ img {
 
 #info {
   background: #ddd;
-  width: 700px;
+  width: 600px;
   height: 300px;
   display: grid;
   grid-template-areas:
-    "iconw temp"
-    "loc loc";
+    "iconw loc"
+    "temp temp";
 }
 
 #search {

@@ -5,7 +5,7 @@ const Info = ({ weather }) => {
     return (
       <div id="info">
         <div id="icon">{weather.weather.icon}</div>
-        <div id="temp">{weather.main.temp}</div>
+        <div id="temp">{weather.main.temp}&#176;C</div>
         <div id="loc">
           {weather.name}, {weather.sys.country}
         </div>
