@@ -9,20 +9,20 @@ const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 function App() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState();
-  const [city, setCity] = useState("moscow");
+  const [city, setCity] = useState("new delhi");
   const [unit, setUnit] = useState("metric");
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${API_KEY}`;
 
   useEffect(() => {
     Axios.get(url).then((response) => {
       setWeather(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, [city, url]);
 
   const onSearchChange = (event) => {
     setSearch(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const onToggle = (event) => {
@@ -31,7 +31,7 @@ function App() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(search);
+    // console.log(search);
     let x = search.split(" ").join("%20");
     setCity(x);
     setSearch("");
