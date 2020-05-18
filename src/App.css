@@ -13,13 +13,38 @@ img {
   width: 3rem;
 }
 
-#widget {
+#info {
   background: #ddd;
   width: 700px;
   height: 300px;
+  display: grid;
+  grid-template-areas:
+    "iconw temp"
+    "loc loc";
 }
 
 #search {
   margin: 20px;
   display: flex;
+}
+
+#icon {
+  grid-area: iconw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#temp {
+  grid-area: temp;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loc {
+  grid-area: loc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
