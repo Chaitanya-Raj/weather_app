@@ -11,6 +11,7 @@ function App() {
   const [weather, setWeather] = useState();
   const [city, setCity] = useState("new delhi");
   const [unit, setUnit] = useState("metric");
+  const [checked, setChecked] = useState(false);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${API_KEY}`;
 
   useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
       setWeather(response.data);
       // console.log(response.data);
     });
-  }, [city, url]);
+  }, [city, unit, url]);
 
   const onSearchChange = (event) => {
     setSearch(event.target.value);
@@ -26,7 +27,10 @@ function App() {
   };
 
   const onToggle = (event) => {
-    setUnit(event.target.value);
+    setChecked(!checked);
+    // console.log(!checked);
+    if (!checked) setUnit("imperial");
+    else setUnit("metric");
   };
 
   const onSubmit = (event) => {
@@ -44,6 +48,7 @@ function App() {
         search={search}
         onChange={onSearchChange}
         onSubmit={onSubmit}
+        checked={checked}
         onToggle={onToggle}
         weather={weather}
       />

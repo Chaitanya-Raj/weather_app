@@ -1,15 +1,12 @@
 import React from "react";
 
-const Info = ({ weather, onToggle }) => {
-  if (weather)
+const Info = ({ weather, checked }) => {
+  if (weather) {
+    let unit;
+    if (checked) unit = "F";
+    else unit = "C";
     return (
       <div id="info">
-        {/* <div id="switch-box">
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
-            </label>
-          </div> */}
         <div id="icon">
           <img
             src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
@@ -22,13 +19,17 @@ const Info = ({ weather, onToggle }) => {
           <sup>{weather.sys.country}</sup>
         </div>
         <div id="temp">
-          <p>Temperature: {weather.main.temp}&#176;C</p>
-          <p>Feels like: {weather.main.feels_like}&#176;C</p>
+          <p>
+            Temperature: {weather.main.temp}&#176;{unit}
+          </p>
+          <p>
+            Feels like: {weather.main.feels_like}&#176;{unit}
+          </p>
           <p>Humidity: {weather.main.humidity} %</p>
         </div>
       </div>
     );
-  else return <div id="info">Waiting</div>;
+  } else return <div id="info">Waiting</div>;
 };
 
 export default Info;
