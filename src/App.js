@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { createClient } from "pexels";
+// import { createClient } from "pexels";
 import Axios from "axios";
 import Header from "./components/header";
 import Body from "./components/body";
 import "./App.css";
 
-const PHOTOS_API_KEY = process.env.REACT_APP_PHOTOS_API_KEY;
-const client = createClient(PHOTOS_API_KEY);
+// const PHOTOS_API_KEY = process.env.REACT_APP_PHOTOS_API_KEY;
+// const client = createClient(PHOTOS_API_KEY);
 
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -25,22 +25,22 @@ function App() {
     });
   }, [city, unit, url]);
 
-  useEffect(() => {
-    if (weather) {
-      let query = weather.name;
-      if (query) {
-        client.photos.search({ query, per_page: 1 }).then((response) => {
-          // console.log(response);
-          if (response.photos.length !== 0) {
-            document.getElementById(
-              "body"
-            ).style.backgroundImage = `url(${response.photos[0].src.landscape})`;
-          }
-          // console.log(query);
-        });
-      }
-    }
-  }, [weather]);
+  // useEffect(() => {
+  //   if (weather) {
+  //     let query = weather.name;
+  //     if (query) {
+  //       client.photos.search({ query, per_page: 1 }).then((response) => {
+  //         // console.log(response);
+  //         if (response.photos.length !== 0) {
+  //           document.getElementById(
+  //             "body"
+  //           ).style.backgroundImage = `url(${response.photos[0].src.landscape})`;
+  //         }
+  //         // console.log(query);
+  //       });
+  //     }
+  //   }
+  // }, [weather]);
 
   const onSearchChange = (event) => {
     setSearch(event.target.value);
