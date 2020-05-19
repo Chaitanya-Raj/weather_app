@@ -1,7 +1,8 @@
 #body {
   background-image: url(./images/background.png);
-  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 91.9vh;
   display: flex;
   flex-direction: column;
