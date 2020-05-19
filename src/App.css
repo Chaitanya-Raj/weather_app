@@ -1,5 +1,6 @@
 #body {
-  background-image: url(./images/background.png);
+  background-image: #222;
+  /* url(./images/background.png); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,13 +100,13 @@ img {
 .searchbar:hover > .search_input {
   padding: 0 10px;
   width: 450px;
-  caret-color: red;
+  caret-color: #2196f3;
   transition: width 0.4s linear;
 }
 
 .searchbar:hover > .search_icon {
   background: white;
-  color: #e74c3c;
+  color: #2196f3;
 }
 
 .search_icon {
