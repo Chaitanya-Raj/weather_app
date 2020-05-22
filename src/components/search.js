@@ -10,7 +10,6 @@ const Search = ({ search, onChange, onSubmit }) => {
             value={search}
             onChange={onChange}
             placeholder="Search..."
-            tabIndex={1}
           />
           <button className="search_icon">
             <i className="fas fa-search"></i>

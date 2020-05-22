@@ -1,5 +1,5 @@
 #body {
-  background-image: #222;
+  background: #222;
   /* url(./images/background.png); */
   background-position: center;
   background-repeat: no-repeat;
@@ -15,6 +15,7 @@ img {
   width: 3rem;
 }
 
+/* container around search, info and switch */
 #widget {
   font-family: "Baloo Chettan 2", cursive;
   display: flex;
@@ -22,6 +23,7 @@ img {
   position: relative;
 }
 
+/* info panel */
 #info {
   color: aliceblue;
   border-radius: 25px;
@@ -34,13 +36,6 @@ img {
     "iconw loc"
     "temp temp";
   grid-template-columns: 1fr 1fr;
-}
-
-#search {
-  margin: 20px;
-  display: flex;
-  height: 2rem;
-  flex-direction: column;
 }
 
 #icon {
@@ -78,6 +73,13 @@ img {
 }
 
 /* searchbar  */
+#search {
+  margin: 20px;
+  display: flex;
+  height: 2rem;
+  flex-direction: column;
+}
+
 .searchbar {
   margin-bottom: 10px;
   height: 60px;
@@ -107,6 +109,8 @@ img {
 .searchbar:hover > .search_icon {
   background: white;
   color: #2196f3;
+
+  outline: 0;
 }
 
 .search_icon {
@@ -190,6 +194,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#loading {
+  color: white;
+  font-size: 2rem;
+}
+
+/* media query for smartphones */
 @media (max-width: 768px) {
   #info {
     width: 90vw;

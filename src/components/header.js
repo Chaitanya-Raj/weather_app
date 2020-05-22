@@ -3,9 +3,9 @@ import Nav from "./nav";
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <Nav />
-    </div>
+    </header>
   );
 };
 

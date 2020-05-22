@@ -29,7 +29,12 @@ const Info = ({ weather, checked }) => {
         </div>
       </div>
     );
-  } else return <div id="info">Waiting</div>;
+  } else
+    return (
+      <div>
+        <i className="fa fa-refresh fa-spin" id="loading"></i>
+      </div>
+    );
 };
 
 export default Info;

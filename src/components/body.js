@@ -3,7 +3,7 @@ import Widget from "./widget";
 
 const Body = ({ search, onChange, onSubmit, checked, onToggle, weather }) => {
   return (
-    <div id="body">
+    <main id="body">
       <Widget
         search={search}
         onChange={onChange}
@@ -12,7 +12,7 @@ const Body = ({ search, onChange, onSubmit, checked, onToggle, weather }) => {
         onToggle={onToggle}
         weather={weather}
       />
-    </div>
+    </main>
   );
 };
 
