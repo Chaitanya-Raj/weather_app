@@ -35,7 +35,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://chaitanya-raj.github.io/weather_app/",
+  "homepage": "https://chaitanya-raj.github.io/weather/",
   "devDependencies": {
     "gh-pages": "^2.2.0"
   }
