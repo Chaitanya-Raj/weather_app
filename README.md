@@ -1,6 +1,6 @@
 # React Weather App
 
-![sample](sample/sample3)
+![sample](sample/sample3.png)
 
 ## Objective
 
