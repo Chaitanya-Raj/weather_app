@@ -1,5 +1,7 @@
 # React Weather App
 
+![sample](sample/sample3)
+
 ## Objective
 
 To create a weather app
